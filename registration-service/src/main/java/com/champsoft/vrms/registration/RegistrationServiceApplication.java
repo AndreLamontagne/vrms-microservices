@@ -3,7 +3,7 @@ package com.champsoft.vrms.registration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.champsoft.vrms")
 public class RegistrationServiceApplication {
 
 	public static void main(String[] args) {
@@ -11,3 +11,4 @@ public class RegistrationServiceApplication {
 	}
 
 }
+

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: registration-service
+  profiles:
+    default: h2
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: 8084
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
+services:
+  cars:
+    base-url: ${CARS_SERVICE_URL:http://localhost:8081}
+  owners:
+    base-url: ${OWNERS_SERVICE_URL:http://localhost:8082}
+  agents:
+    base-url: ${AGENTS_SERVICE_URL:http://localhost:8083}
