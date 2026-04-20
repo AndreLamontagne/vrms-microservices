@@ -1,0 +1,7 @@
+services:
+  cars:
+    base-url: ${CARS_SERVICE_URL:http://cars-service:8080}
+  owners:
+    base-url: ${OWNERS_SERVICE_URL:http://owners-service:8080}
+  agents:
+    base-url: ${AGENTS_SERVICE_URL:http://agents-service:8080}
